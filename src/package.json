@@ -1,0 +1,20 @@
+{
+  "name": "digi-ui",
+  "version": "1.0.2",
+  "description": "digi UI 组件库",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digi1874/digi-ui.git"
+  },
+  "keywords": [
+    "digi",
+    "digi-ui"
+  ],
+  "author": "lin09",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digi1874/digi-ui/issues"
+  },
+  "homepage": "https://github.com/digi1874/digi-ui#readme"
+}
