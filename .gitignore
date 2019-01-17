@@ -60,4 +60,6 @@ typings/
 # next.js build output
 .next
 
-npm_package/
+src/LICENSE
+src/README.md
+src/package.json
