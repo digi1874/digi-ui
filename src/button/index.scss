@@ -13,6 +13,12 @@
   outline: none;
   cursor: pointer;
   transition: box-shadow 0.25s;
+
+  &[disabled] {
+    color: rgba(0, 0, 0, 0.26);
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 .btn-shadow {
@@ -21,4 +27,13 @@
   &:active {
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
   }
+}
+
+.btn-border-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+
+.btn-background-disabled {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
 }
