@@ -1,6 +1,3 @@
 import './index.scss'
-
-export default class {
-  constructor () {
-  }
-}
+export * from './button'
+export * from './textButton'
