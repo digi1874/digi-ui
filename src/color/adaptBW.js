@@ -1,9 +1,11 @@
 /**
  * 根据颜色为其匹配黑白色
- * @param   {String} color  - rgb色值，格式为：/^#[0-9a-f]{6}$/
- * @param   {String} back   - 黑色，默认值为'#333333'，格式为：/^#[0-9a-f]{6}$/
- * @param   {String} white  - 白色，默认值为'#ffffff'，格式为：/^#[0-9a-f]{6}$/
- * @returns {String}        - 返回黑色或白色
+ * @function
+ * @param   {String} color         - rgb色值，格式为：/^#[0-9a-f]{6}$/
+ * @param   {Object} option        - rgb色值格式为：/^#[0-9a-f]{6}$/
+ * @param   {String} option.back   - 黑色，默认值为'#333333'，格式为：/^#[0-9a-f]{6}$/
+ * @param   {String} option.white  - 白色，默认值为'#ffffff'，格式为：/^#[0-9a-f]{6}$/
+ * @returns {String}               - 返回黑色或白色
  * @example
  * import { adaptBW } from 'digi-ui/color'
  *

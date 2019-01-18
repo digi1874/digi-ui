@@ -3,6 +3,7 @@ style.type  = 'text/css'
 
 /**
  * 添加样式元素
+ * @function addStyle
  * @param {String} cssText - css样式文本
  */
 export default cssText => {

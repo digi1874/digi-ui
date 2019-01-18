@@ -1,19 +1,19 @@
 import addStyle                 from '../style'
-import { ripple }               from '../ripple'
+import { Ripple }               from '../ripple'
 import { darkenColor, adaptBW } from '../color'
 import { className, baseColor } from './base'
 
 const classNames = []
 
-/**
- * 文本按钮
- * @class
- * @param   {String}  color           - 文本rgb色值，默认值为“'#333333'”或“#ffffff”(根据backgroundColor)，格式为：/^#[0-9a-f]{6}$/
- * @param   {String}  backgroundColor - 背景rgb色值，默认值为“transparent”，格式为：/^#[0-9a-f]{6}$/
- * @param   {Boolean} disabled        - 禁用按钮，默认false；如果为true，参数color和backgroundColor无效
- * @returns {Object}                  - { className: [ ... ], tagName: 'button', child: { ...ripple }, [disabled] }
- */
 export class TextButton {
+  /**
+   * 文本按钮
+   * @param   {Object}  param                 - rgb色值格式为：/^#[0-9a-f]{6}$/
+   * @param   {String}  param.color           - 文本rgb色值，默认值为“'#333333'”或“#ffffff”(根据backgroundColor)，格式为：/^#[0-9a-f]{6}$/
+   * @param   {String}  param.backgroundColor - 背景rgb色值，默认值为“transparent”，格式为：/^#[0-9a-f]{6}$/
+   * @param   {Boolean} param.disabled        - 禁用按钮，默认false；如果为true，参数color和backgroundColor无效
+   * @returns {Object}                        - { className: [ ... ], tagName: 'button', child: { ...ripple }, [disabled] }
+   */
   constructor ({ color, backgroundColor, disabled } = {}) {
     this.tagName = 'button'
 
@@ -51,7 +51,7 @@ export class TextButton {
       }
 
       this.className = [ className, csNm ]
-      this.child     = new ripple({ color })
+      this.child     = new Ripple({ color })
     }
   }
 }

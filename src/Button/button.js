@@ -4,16 +4,16 @@ import { className }  from './base'
 
 const classNames = []
 
-/**
- * 按钮
- * @class
- * @param   {String}  color           - 文本rgb色值，默认值为“'#333333'”或“#ffffff”(根据backgroundColor)，格式为：/^#[0-9a-f]{6}$/
- * @param   {String}  backgroundColor - 背景rgb色值，默认值为“transparent”，格式为：/^#[0-9a-f]{6}$/
- * @param   {String}  borderColor     - 边框rgb色值，默认值为(backgroundColor或color)+'88'
- * @param   {Boolean} disabled        - 禁用按钮，默认false；如果为true，参数color、borderColor和backgroundColor无效
- * @returns {Object}                  - { className: [ ... ], tagName: 'button', child: { ...ripple } }
- */
 export class Button extends TextButton {
+  /**
+   * 按钮
+   * @param   {Object}  param                 - rgb色值格式为：/^#[0-9a-f]{6}$/
+   * @param   {String}  param.color           - 文本rgb色值，默认值为“'#333333'”或“#ffffff”(根据backgroundColor)，格式为：/^#[0-9a-f]{6}$/
+   * @param   {String}  param.backgroundColor - 背景rgb色值，默认值为“transparent”，格式为：/^#[0-9a-f]{6}$/
+   * @param   {String}  param.borderColor     - 边框rgb色值，默认值为(backgroundColor或color)+'88'
+   * @param   {Boolean} param.disabled        - 禁用按钮，默认false；如果为true，参数color、borderColor和backgroundColor无效
+   * @returns {Object}                        - { className: [ ... ], tagName: 'button', child: { ...ripple } }
+   */
   constructor ({ color, backgroundColor, borderColor, disabled } = {}) {
     super({ color, backgroundColor, disabled })
     if (disabled) {
@@ -34,7 +34,7 @@ export class Button extends TextButton {
         let hoverBorderColor = 'transparent'
         borderColor = borderColor || (backgroundColor ? backgroundColor : color)
         if (borderColor !== 'transparent') {
-          borderColor += '88'
+          borderColor     += '88'
           hoverBorderColor = backgroundColor || color
         }
         addStyle(`

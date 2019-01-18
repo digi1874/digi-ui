@@ -6,13 +6,13 @@ const className  = 'ripple'
 const effect     = document.createElement('div')
 effect.className = 'ripple-effect'
 
-/**
- * 涟波
- * @class
- * @param   {String} color  - 颜色，默认值为“#000000”，格式为：/^#[0-9a-f]{6}$/
- * @returns {Object}        - { className: string, onclick: fun }
- */
-export class ripple {
+export class Ripple {
+  /**
+   * 涟波
+   * @param   {Object} param        - rgb色值格式为：/^#[0-9a-f]{6}$/
+   * @param   {String} param.color  - 颜色，默认值为“#000000”，格式为：/^#[0-9a-f]{6}$/
+   * @returns {Object}              - { className: string, onclick: fun }
+   */
   constructor ({ color } = {}) {
     color           = color || '#000000'
     const colorName = `${ className }-${ color.replace('#', '') }`
