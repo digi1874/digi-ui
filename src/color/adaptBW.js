@@ -18,7 +18,7 @@ export const adaptBW = (color, { back, white } = {}) => {
     throw new TypeError(color)
   }
 
-  if ((parseInt(color, 16) >> 8 & 0x00ff) > 204) {
+  if ((parseInt(color.replace('#', ''), 16) >> 8 & 0x00ff) > 204) {
     return back || '#333333'
   } else {
     return white || '#ffffff'
