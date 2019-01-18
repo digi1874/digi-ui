@@ -1,15 +1,17 @@
 {
   "name": "digi-ui",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "digi UI 组件库",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/index.js",
-    "precommit": "yarn lint",
+    "lint": "eslint src",
     "beta": "yarn lint && babel-node publish.js && yarn publish src --access=public --tag=beta",
     "pubh": "yarn lint && babel-node publish.js && yarn publish src --access=public",
     "test": "yarn lint && jest --config jest.config.js"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/digi1874/digi-ui.git"
@@ -33,6 +35,7 @@
     "babel-jest": "^23.6.0",
     "eslint": "^5.12.0",
     "jest": "^23.6.0",
-    "jsonfile": "^5.0.0"
+    "jsonfile": "^5.0.0",
+    "pre-commit": "^1.2.2"
   }
 }
