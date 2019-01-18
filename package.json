@@ -2,11 +2,12 @@
   "name": "digi-ui",
   "version": "1.0.3",
   "description": "digi UI 组件库",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "lint": "eslint src",
-    "beta": "yarn lint && babel-node publish.js && yarn publish src --access=public --tag=beta",
-    "pubh": "yarn lint && babel-node publish.js && yarn publish src --access=public",
+    "pf": "babel-node publish.js",
+    "beta": "yarn lint && yarn pf && yarn publish src --access=public --tag=beta",
+    "pubh": "yarn lint && yarn pf && yarn publish src --access=public",
     "test": "yarn lint && jest --config jest.config.js"
   },
   "pre-commit": [

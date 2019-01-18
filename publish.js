@@ -9,6 +9,7 @@ const packageJson = jsonfile.readFileSync(PACKAGEFILE)
 const keys = ['name', 'version', 'description', 'main', 'repository', 'keywords', 'author', 'license', 'bugs', 'homepage']
 const newPackageJson = {}
 keys.forEach(key => newPackageJson[key] = packageJson[key])
+newPackageJson.main = 'index.js'
 jsonfile.writeFile(path.join(NPM_DIR, PACKAGEFILE), newPackageJson, { spaces: 2 })
 
 // 拷贝文件
