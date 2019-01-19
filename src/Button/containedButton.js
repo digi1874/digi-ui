@@ -1,3 +1,4 @@
+import './containedButton.scss'
 import { TextButton } from './textButton'
 import { className }  from './base'
 
