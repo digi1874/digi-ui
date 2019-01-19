@@ -32,7 +32,7 @@ export class Ripple {
       el.style.left            = (e.offsetX - 50) + 'px'
       el.style.backgroundColor = color
       this.appendChild(el)
-      window.setTimeout(() => el.remove(), 2000);
+      window.setTimeout(() => el.remove(), 1000);
     }
   }
 }

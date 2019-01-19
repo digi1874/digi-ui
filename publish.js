@@ -6,7 +6,7 @@ const NPM_DIR = 'src'
 const PACKAGEFILE = 'package.json'
 
 const packageJson = jsonfile.readFileSync(PACKAGEFILE)
-const keys = ['name', 'version', 'description', 'main', 'repository', 'keywords', 'author', 'license', 'bugs', 'homepage']
+const keys = ['name', 'version', 'description', 'main', 'repository', 'keywords', 'author', 'license', 'bugs', 'homepage', 'dependencies']
 const newPackageJson = {}
 keys.forEach(key => newPackageJson[key] = packageJson[key])
 newPackageJson.main = 'index.js'

@@ -1462,6 +1462,11 @@ diff@^3.2.0:
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
   integrity sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
 
+digi@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/digi/-/digi-1.0.6.tgz#6af2b3a7cbfc5e5e31d9dee16a8ce9e90e52929a"
+  integrity sha512-4y8x7V52bd3HoxiNzXynJ3Q5Qidr2wGtgDdjHqbmwKXeS5Q0G/1SM8CGP4v2Q7jx+qlSKHll8fHmZ5D8FgkIqg==
+
 doctrine@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"

@@ -14,7 +14,7 @@
   height: 100px;
   opacity: 0;
   pointer-events: none;
-  animation: ripple-animation 2s;
+  animation: ripple-animation 1s;
 }
 
 @keyframes ripple-animation {
@@ -23,7 +23,7 @@
     opacity: 0.1;
   }
   to {
-    transform: scale(10);
+    transform: scale(5);
     opacity: 0;
   }
 }
