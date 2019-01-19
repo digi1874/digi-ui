@@ -1,8 +1,9 @@
-import './index.scss'
 import addStyle                 from '../style'
 import { Ripple }               from '../ripple'
 import { darkenColor, adaptBW } from '../color'
 import { className, baseColor } from './base'
+
+import './index.scss'
 
 const classNames = []
 

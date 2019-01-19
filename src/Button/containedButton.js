@@ -1,6 +1,7 @@
-import './containedButton.scss'
 import { TextButton } from './textButton'
 import { className }  from './base'
+
+import './containedButton.scss'
 
 export class ContainedButton extends TextButton {
   /**

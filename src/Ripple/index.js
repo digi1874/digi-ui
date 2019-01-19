@@ -1,5 +1,6 @@
-import './index.scss'
 import addStyle from '../style'
+
+import './index.scss'
 
 const colors     = []
 const className  = 'ripple'

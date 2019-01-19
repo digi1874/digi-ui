@@ -1,7 +1,8 @@
-import './index.scss'
 import addStyle     from '../style'
 import { adaptBW }  from '../color'
 import { arrayTag } from '../toStringTag'
+
+import './index.scss'
 
 const className  = 'badge'
 const classNames = []

@@ -1,6 +1,6 @@
 import { createData } from 'digi'
-import { arrayTag }   from '../toStringTag'
 import { TextButton } from '../Button'
+import { arrayTag }   from '../toStringTag'
 import addStyle       from '../style'
 
 import './navigation.scss'
