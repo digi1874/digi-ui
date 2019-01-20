@@ -1,4 +1,4 @@
-import { arrayTag } from '../toStringTag'
+import { concat } from '../utils'
 import { Params } from '../Params'
 
 import './index.scss'
@@ -13,11 +13,6 @@ export class Card extends Params {
    */
   constructor (params) {
     super(params)
-
-    if (toString.call(this.className) !== arrayTag) {
-      this.className = [ className ].concat([ this.className ])
-    } else {
-      this.className = [ className ].concat(this.className)
-    }
+    this.className = concat([ className ], this.className)
   }
 }
