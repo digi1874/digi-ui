@@ -34,7 +34,7 @@ export class Badge extends Props {
         }`)
     }
 
-    this.className = concat([ 'badge-content' ], this.className)
+    this.className = concat([ 'badge-content' ], ...this.className)
     this.child     = concat(this.child, { className: [className, csNm], text: this.badgeContent })
 
     delete this.badgeContent

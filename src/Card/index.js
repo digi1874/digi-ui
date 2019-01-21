@@ -13,6 +13,6 @@ export class Card extends Props {
    */
   constructor (params) {
     super(params)
-    this.className = concat([ className ], this.className)
+    this.className = concat([ className ], ...this.className)
   }
 }

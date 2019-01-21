@@ -33,7 +33,7 @@ export class Modal extends Props {
       [ className + '-show', data.$tp('value') ],
       // 隐藏
       [ className + '-hide', data.$tp('value', val => val === false) ]
-    ], this.className)
+    ], ...this.className)
 
     this.child = {
       className: [
