@@ -1,6 +1,6 @@
 import { createData } from 'digi'
 import { concat }     from '../utils'
-import { Params }     from '../Params'
+import { Props }     from '../Props'
 
 import './index.scss'
 
@@ -8,7 +8,7 @@ const className       = 'modal'
 const scrollClassName = className + '-scroll'
 const data            = createData()
 
-export class Modal extends Params {
+export class Modal extends Props {
   /**
    * 模态框
    * @param   {Object}              params            - 对象
@@ -16,8 +16,8 @@ export class Modal extends Params {
    * @param   {Object|Array|String} params.body       - 身体内容
    * @param   {Object|Array|String} params.footer     - 底部内容
    * @param   {Boolean}             params.fullScreen - 是否全屏，默认为false
-   * @param   {String}              params.scroll     - 定义滚动，默认为'modal'，'modal'：窗口滚动，'paper'：身体内容滚动
-   * @returns {Object}                                - { ...params, className: Array, onclick: Function, child: Object, value: Boolean }；value：控制显示隐藏；
+   * @param   {String}              params.scroll     - 定义滚动，默认为'paper'，全屏时强制为'paper'，'modal'：窗口滚动，'paper'：身体内容滚动
+   * @returns {Object}                                - { ...params, className: Array, child: Object, value: Boolean }；value：控制显示隐藏；
    */
   constructor (params) {
     super(params)
@@ -34,9 +34,6 @@ export class Modal extends Params {
       // 隐藏
       [ className + '-hide', data.$tp('value', val => val === false) ]
     ], this.className)
-
-    // 点击背景隐藏
-    this.onclick = () => this.value = false
 
     this.child = {
       className: [
@@ -62,6 +59,7 @@ export class Modal extends Params {
         this.footer
       ],
     }
+
     // 清除
     delete this.head
     delete this.body
