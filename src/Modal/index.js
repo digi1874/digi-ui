@@ -6,7 +6,6 @@ import './index.scss'
 
 const className       = 'modal'
 const scrollClassName = className + '-scroll'
-const data            = createData()
 
 export class Modal extends Props {
   /**
@@ -21,6 +20,7 @@ export class Modal extends Props {
    */
   constructor (params) {
     super(params)
+    this.$data = createData()
 
     // 是否全部滚动，全屏时否定全部滚动
     this.scroll = this.fullScreen ? false : this.scroll === 'modal'
@@ -30,9 +30,9 @@ export class Modal extends Props {
       // 全部滚动
       [ scrollClassName, this.scroll ],
       // 显示
-      [ className + '-show', data.$tp('value') ],
+      [ className + '-show', this.$data.$tp('value') ],
       // 隐藏
-      [ className + '-hide', data.$tp('value', val => val === false) ]
+      [ className + '-hide', this.$data.$tp('value', val => val === false) ]
     ], ...this.className)
 
     this.child = {
@@ -69,11 +69,11 @@ export class Modal extends Props {
   }
   get value () {
     // 获取显示隐藏值
-    return data.value
+    return this.$data.value
   }
   set value (val) {
     // 设置显示隐藏值
-    data.value = !!val
+    this.$data.value = !!val
 
     if (val) {
       // 禁止document.body滚动
